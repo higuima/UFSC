@@ -1,0 +1,23 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[portuguese]{babel}
+\begin{document}
+Este é um pequeno documento para ilustrar o uso básico de LaTeX.
+
+Simplesmente deixe uma linha em branco para gerar um novo parágrafo; identação é
+automatica.
+
+Expressões matemáticas como  $y = 3\sin x$ são obtidas com o símbolo do cifrão.
+Equações podem ser expostas como em 
+\[ y = 3\sin x.\]
+Também é possível enumerar equações:
+\begin{equation}\label{equal}
+y’ =3\cos x.
+\end{equation}
+Como nós identificamos a equação acima com um enumerador, podemos nos referir
+à ela sem ter que saber qual é o número que foi utilizado. Assim, a equação anterior foi enumerada como~(\ref{equal}).
+Potências (superescritas), como em $x^2$, são obtidas com \verb"^";
+potências mais complicadas precisam ser colocadas dentro de chaves: $x^{2+\alpha}$.
+Assim como, subscritos são obtidos com o underline: $y_3$ ou $y_{n+1}$.
+Usamos ambas maneiras em $x_{n+1}^{2+\alpha}$.
+\end{document}
