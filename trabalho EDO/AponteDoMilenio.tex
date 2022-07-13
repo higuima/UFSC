@@ -75,36 +75,60 @@ temos que a frequência natural da onda é incrementada e sua amplitude cresce,
 resultando assim em um fenômeno de ressonância que causou um movimento lateral 
 sincronizado e altamente perceptível à todos em cima e à volta da ponte.
 
-Pensando em vibrações de molas, podemos descrever a força elástica como $F_e = -k.x$, onde k é a
+Pensando em vibrações de molas, podemos descrever a força elástica como $F_e = -k.y$, onde k é a
 constante elástica e x é a unidade de distorção da mola. Pela segunda lei de newton, sabemos que a força de um
 objeto é igual à sua masssa vezes à sua aceleração de maneira que podemos descrever a aceleração de um objeto como:
-\[ a = \frac{d^2 x}{d t^2} \]
+\[ a = \frac{d^2 y}{d t^2} \]
 
 Assim, temos que a equação de força elástica é:
-\[ m.\frac{d^2 x}{d t^2} = -k.x \]
-\[ m.\frac{d^2 x}{d t^2} + k.x = 0\]
+\[ m.\frac{d^2 y}{d t^2} = -k.y \]
+\[ m.\frac{d^2 y}{d t^2} + k.y = 0\]
 
-Tendo em vista que a força de amortecimento é conhecida como $F_c = -c\frac{dx}{dt}$ ,
+Tendo em vista que a força de amortecimento é conhecida como $F_c = -c\frac{dy}{dt}$,
 ao pensar em uma vibração amortecida temos que a força do objeto será a 
 força restauradora + força de amortecimento
-\[ m.\frac{d^2 x}{d t^2} = -k.x - c\frac{dx}{dt}\]
-\[ m.\frac{d^2 x}{d t^2} + c\frac{dx}{dt}  + k.x = 0\]
+\[ m.\frac{d^2 y}{d t^2} = -k.y - c\frac{dy}{dt}\]
+\[ m.\frac{d^2 y}{d t^2} + c\frac{dy}{dt}  + k.y = 0\]
 
 Agora, supondo que além da força restauradora e da força de amortecimento, existe uma força externa sendo aplciada no
 objeto, por exemplo uma multidão de passos sincronizados que gera uma movimentação lateral.
 Com essas variáveis teríamos que:
-\[ m.\frac{d^2 x}{d t^2} = -k.x - c\frac{dx}{dt} + F(t)\] 
-\[ m.\frac{d^2 x}{d t^2} + c\frac{dx}{dt}  + k.x = F(t)\] 
+\[ m.\frac{d^2 y}{d t^2} = -k.y - c\frac{dy}{dt} + F(t)\] 
+\[ m.\frac{d^2 y}{d t^2} + c\frac{dy}{dt}  + k.y = F(t)\] 
 
-Esta equação é a que descreve a vibração forçada e também,o fenômeno da ressonância.
+Esta equação é a que descreve a vibração forçada e também, quando existe um subamortecimento (ou c=0),
+temos também a descrição do fenômeno da ressonância.
 Pode se perceber que ela é uma equação linear não homogênea de segunda ordem e para encontrarmos 
 uma solução para esse tipo de equação, precisamos utilizar o método dos coeficientes indeterminados.
 
 \pagebreak 
 \section{Resolução da EDO}
 O método dos coeficientes indeterminados diz que a solução geral de uma equação diferencial não homogênea
-pode ser escrita como
+da forma $y'' + p(t)'y + q(t)y = g(t)$ pode ser escrita como
 \[ y(x) = Y(t) + c_1.y_1(t) + c_2.y_2(t)\] 
 Para $c_1, c_2 \in R$ e onde ${y_1,y_2}$ formam um conjunto fundamental de soluções
-da EDO homogênea correspondente à equação 
+da EDO homogênea correspondente à equação. Neste caso, temos que a EDO correspondente é uma equação
+linear homogênea e é escrita como: 
+\[y'' + p(t)'y + q(t)y = 0\] 
+
+Aplicando esta ideia então à nossa equação linear não homogênea de segunda ordem que descreve o problema 
+de vibração forçada da ponte, temos que:
+A equação original será 
+
+\[  my'' + cy'  + ky = F(t)\] 
+e sua equação correspondente será
+\[ my'' + cy'  + ky = 0\]
+Agora, podemos encontrar uma equação auxiliar e suas raízes:
+\[ mr^2 + cr  + k = 0\] 
+
+\vspace*{0.8cm}
+descrever:
+
+- todos os deltas possíveis o que eles implicam
+
+- quais são as soluções da EDO para cada delta possível
+
+- qual se aplica ao problema
+
+- resolver a equação não homogênea para algum F(t)
 \end{document}
