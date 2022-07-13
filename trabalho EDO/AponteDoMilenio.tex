@@ -1,0 +1,110 @@
+\documentclass[]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[portuguese]{babel}
+\usepackage{graphicx}
+\usepackage{indentfirst}
+\begin{document}
+\begin{titlepage}
+    \begin{center}
+        \vspace*{1cm}
+        \huge
+        \textbf{A equação do Milênio} % ou o projeto do milênio
+        
+        \large
+        \vspace{0.5cm}
+         A ponte que balançou a engenharia.
+             
+        \vspace{0.5cm}
+
+        \includegraphics[width=1\textwidth]{logoUfsc.png}
+
+        \vspace{0.8cm}
+        \textbf{Helena Isola Guimarães}
+        \vspace{0.8cm}
+             
+        Departmento de Matemática\\
+        Universidade Federal de Santa Catarina\\
+             
+    \end{center}
+\end{titlepage}
+
+\begin{abstract}
+    Neste trabalho, irei mostrar o problema de vibração forçada aplicado à uma ponte construída em Londres no ano 2000.
+Este problema de vibração forçada pode ser descrito por uma equação diferencial linear não homogênea, que como vimos em aula,
+pode ser resolvida pelo método dos coeficientes indeterminados.
+\end{abstract}
+\pagebreak 
+
+\section{Introdução}
+
+A ponte do milênio, construída em Londres no ano de 2000 para comemorar
+a virada do milênio. Seu objetivo era desafiar a engenharia e ter um estilo arquitetônico único, e foi exatamente isso que aconteceu.
+Graças ao design moderno e desafiador da ponte, no dia da sua inauguração a ponte começou a se mostrar um projeto falho.
+Enquanto as pessoas iam subindo na ponte e iam caminhando sobre ela, a ponte começou a balançar. Quanto mais pessoas andavam sobre ela,
+mais ela balançava. Este incidente foi tão grave que tiveram que fechar a ponte até conseguirem consertar o problema.
+
+A ponte sofria de um fenômeno denominado vibração lateral sincronizada, causado pelo andar das pessoas em cima da mesma.
+Este imprevisto provocou dois anos de pesquisa sobre o caminhar humano e o impacto dele sobre a estrutura. 
+Depois de uma extensa investigação, percebeu-se que os passos individuais não seriam capazes de gerar tanto impacto, e assim
+o conceito de "efeito de multidão" se tornou foco do estudo também. Concluíram que, graças ao efeito de multidão,
+as pessoas andando sobre a ponte sincronizavam o caminhar, mesmo sem perceber, e que, graças à movimentação horizontal extrema provocada pelos
+passos da multidão, a ponte sofria o fenômeno de excitação lateral sincronizada.
+
+Tendo em vista esse problema aplicado, este trabalho tem como objetivo descerver matemáticamente
+o problema encontrado pelos engenheiros, mostrar que o problema é de fato, uma equação linear não 
+homogênea de segunda ordem, resolver esta EDO e mostrar suas reais implicações no mundo real.
+Na modelagem, irei discutir quais foram as causas deste problema e com essas variáveis, montar a EDO que
+descreve o fenômeno. Na resolução, como indica o nome, irei utilizar do método dos coeficientes indeterminados
+para resolver a EDO encontrada. Na discussão, irei demonstrar quais as consequências da resolução, suas representações
+gráficas e o que significam e explicar quais foram as soluções aplicadas pelos engenheiros responsáveis.
+Na conclusão irei discutir como esta ponte revolucionou a história da engenharia, da arquitetura e 
+como este problema gerou uma nova maneira de pensar matemáticamente.
+
+\pagebreak 
+\section{Modelagem}
+
+A vibração forçada que foi provocada pelo movimento horizontal lateral dos passos sincronizados das pessoas na ponte também pode ser 
+chamado de ressônancia, pois a ressonância  é o resultado de quando a frequência aplicada reforça a frequência natural e nesse caso temos vibrações de grande amplitude.
+
+Ao andar, o centro de gravidade das pessoas alternava lateralmente. 
+Quando temos apenas uma pessoa caminhando, este esforço lateral pode ser considerado 
+desprezível, porém quando consideramos uma multidão de centenas de pessoas, temos o 
+chamado “efeito multidão”, em que a sincronia exercida pela caminhada do público é tal 
+que acaba criando uma onda com frequência muito similar à da própria ponte. Assim, 
+temos que a frequência natural da onda é incrementada e sua amplitude cresce, 
+resultando assim em um fenômeno de ressonância que causou um movimento lateral 
+sincronizado e altamente perceptível à todos em cima e à volta da ponte.
+
+Pensando em vibrações de molas, podemos descrever a força elástica como $F_e = -k.x$, onde k é a
+constante elástica e x é a unidade de distorção da mola. Pela segunda lei de newton, sabemos que a força de um
+objeto é igual à sua masssa vezes à sua aceleração de maneira que podemos descrever a aceleração de um objeto como:
+\[ a = \frac{d^2 x}{d t^2} \]
+
+Assim, temos que a equação de força elástica é:
+\[ m.\frac{d^2 x}{d t^2} = -k.x \]
+\[ m.\frac{d^2 x}{d t^2} + k.x = 0\]
+
+Tendo em vista que a força de amortecimento é conhecida como $F_c = -c\frac{dx}{dt}$ ,
+ao pensar em uma vibração amortecida temos que a força do objeto será a 
+força restauradora + força de amortecimento
+\[ m.\frac{d^2 x}{d t^2} = -k.x - c\frac{dx}{dt}\]
+\[ m.\frac{d^2 x}{d t^2} + c\frac{dx}{dt}  + k.x = 0\]
+
+Agora, supondo que além da força restauradora e da força de amortecimento, existe uma força externa sendo aplciada no
+objeto, por exemplo uma multidão de passos sincronizados que gera uma movimentação lateral.
+Com essas variáveis teríamos que:
+\[ m.\frac{d^2 x}{d t^2} = -k.x - c\frac{dx}{dt} + F(t)\] 
+\[ m.\frac{d^2 x}{d t^2} + c\frac{dx}{dt}  + k.x = F(t)\] 
+
+Esta equação é a que descreve a vibração forçada e também,o fenômeno da ressonância.
+Pode se perceber que ela é uma equação linear não homogênea de segunda ordem e para encontrarmos 
+uma solução para esse tipo de equação, precisamos utilizar o método dos coeficientes indeterminados.
+
+\pagebreak 
+\section{Resolução da EDO}
+O método dos coeficientes indeterminados diz que a solução geral de uma equação diferencial não homogênea
+pode ser escrita como
+\[ y(x) = Y(t) + c_1.y_1(t) + c_2.y_2(t)\] 
+Para $c_1, c_2 \in R$ e onde ${y_1,y_2}$ formam um conjunto fundamental de soluções
+da EDO homogênea correspondente à equação 
+\end{document}
