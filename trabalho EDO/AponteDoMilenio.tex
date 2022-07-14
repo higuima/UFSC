@@ -14,9 +14,9 @@
         \vspace{0.5cm}
          A ponte que balançou a engenharia.
              
-        \vspace{0.5cm}
+        \vspace{0.9cm}
 
-        \includegraphics[width=1\textwidth]{logoUfsc.png}
+        \includegraphics[width=0.8\textwidth]{logoUfsc.png}
 
         \vspace{0.8cm}
         \textbf{Helena Isola Guimarães}
@@ -43,13 +43,13 @@ de uma multidão em uma equação trigonométrica.
 
 \section{Introdução}
 
-A ponte do milênio, construída em Londres no ano de 2000 para comemorar
-a virada do milênio. Seu objetivo era desafiar a engenharia e ter um estilo arquitetônico único, e foi exatamente isso que aconteceu.
+A ponte do milênio, foi construída em Londres no ano de 2000 para comemorar
+a virada do milênio, com o objetivo de desafiar a engenharia e ter um estilo arquitetônico único, e foi exatamente isso que aconteceu.
 Graças ao design moderno e desafiador da ponte, no dia da sua inauguração a ponte começou a se mostrar um projeto falho.
 Enquanto as pessoas iam subindo na ponte e iam caminhando sobre ela, a ponte começou a balançar. Quanto mais pessoas andavam sobre ela,
 mais ela balançava. Este incidente foi tão grave que tiveram que fechar a ponte até conseguirem consertar o problema.
 
-A ponte sofria de um fenômeno denominado vibração lateral sincronizada, causado pelo andar das pessoas em cima da mesma.
+A ponte sofria de um fenômeno denominado vibração lateral sincronizada (REFERENCIA AQUI), causado pelo andar das pessoas em cima da mesma.
 Este imprevisto provocou dois anos de pesquisa sobre o caminhar humano e o impacto dele sobre a estrutura. 
 Depois de uma extensa investigação, percebeu-se que os passos individuais não seriam capazes de gerar tanto impacto, e assim
 o conceito de "efeito de multidão" se tornou foco do estudo também. Concluíram que, graças ao efeito de multidão,
@@ -58,13 +58,13 @@ passos da multidão, a ponte sofria o fenômeno de excitação lateral sincroniz
 
 Tendo em vista esse problema aplicado, este trabalho tem como objetivo descerver matemáticamente
 o problema encontrado pelos engenheiros, mostrar que o problema é de fato, uma equação linear não 
-homogênea de segunda ordem, resolver esta EDO e mostrar suas reais implicações no mundo real.
+homogênea de segunda ordem, resolver esta EDO e mostrar suas implicações no mundo real.
 Na modelagem, irei discutir quais foram as causas deste problema e com essas variáveis, montar a EDO que
 descreve o fenômeno. Na resolução, como indica o nome, irei utilizar do método dos coeficientes indeterminados
 para resolver a EDO encontrada. Na discussão, irei demonstrar quais as consequências da resolução, suas representações
-gráficas e o que significam e explicar quais foram as soluções aplicadas pelos engenheiros responsáveis.
-Na conclusão irei discutir como esta ponte revolucionou a história da engenharia, da arquitetura e 
-como este problema gerou uma nova maneira de pensar matemáticamente.
+gráficas e o que significam.
+Na conclusão irei discutir como esta ponte revolucionou a história da engenharia, da arquitetura, explicar quais foram as soluções 
+aplicadas pelos engenheiros responsáveis e como este problema gerou uma nova maneira de pensar matemáticamente.
 
 \pagebreak 
 \section{Modelagem}
@@ -72,18 +72,18 @@ como este problema gerou uma nova maneira de pensar matemáticamente.
 A vibração forçada que foi provocada pelo movimento horizontal lateral dos passos sincronizados das pessoas na ponte também pode ser 
 chamado de ressônancia, pois a ressonância  é o resultado de quando a frequência aplicada reforça a frequência natural e nesse caso temos vibrações de grande amplitude.
 
-Ao andar, o centro de gravidade das pessoas alternava lateralmente. 
+Ao andar, o centro de gravidade das pessoas se alterna lateralmente. 
 Quando temos apenas uma pessoa caminhando, este esforço lateral pode ser considerado 
 desprezível, porém quando consideramos uma multidão de centenas de pessoas, temos o 
-chamado “efeito multidão”, em que a sincronia exercida pela caminhada do público é tal 
+chamado “efeito de multidão”, em que a sincronia exercida pela caminhada do público é tal 
 que acaba criando uma onda com frequência muito similar à da própria ponte. Assim, 
 temos que a frequência natural da onda é incrementada e sua amplitude cresce, 
 resultando assim em um fenômeno de ressonância que causou um movimento lateral 
 sincronizado e altamente perceptível à todos em cima e à volta da ponte.
 
 Pensando em vibrações de molas, podemos descrever a força elástica como $F_e = -k.y$, onde k é a
-constante elástica e x é a unidade de distorção da mola. Pela segunda lei de newton, sabemos que a força de um
-objeto é igual à sua masssa vezes à sua aceleração de maneira que podemos descrever a aceleração de um objeto como:
+constante elástica e y é a unidade de distorção da mola. Pela segunda lei de newton, sabemos que a força de um
+objeto é igual à sua massa vezes à sua aceleração de maneira que podemos descrever a aceleração de um objeto como:
 \[ a = \frac{d^2 y}{d t^2} \]
 
 Assim, temos que a equação de força elástica é:
@@ -96,14 +96,14 @@ força restauradora + força de amortecimento
 \[ m.\frac{d^2 y}{d t^2} = -k.y - c\frac{dy}{dt}\]
 \[ m.\frac{d^2 y}{d t^2} + c\frac{dy}{dt}  + k.y = 0\]
 
-Agora, supondo que além da força restauradora e da força de amortecimento, existe uma força externa sendo aplciada no
+Agora, supondo que além da força restauradora e da força de amortecimento, existe uma força externa sendo aplicada no
 objeto, por exemplo uma multidão de passos sincronizados que gera uma movimentação lateral.
 Com essas variáveis teríamos que:
 \[ m.\frac{d^2 y}{d t^2} = -k.y - c\frac{dy}{dt} + F(t)\] 
 \[ m.\frac{d^2 y}{d t^2} + c\frac{dy}{dt}  + k.y = F(t)\] 
 
-Esta equação é a que descreve a vibração forçada e também, quando existe uma escassez de amortecimento,
-temos também a descrição do fenômeno da ressonância.
+Esta equação é a que descreve a vibração forçada e quando existe uma escassez de amortecimento,
+descreve também o fenômeno da ressonância.
 Pode se perceber que ela é uma equação linear não homogênea de segunda ordem e para encontrarmos 
 uma solução para esse tipo de equação, precisamos utilizar o método dos coeficientes indeterminados.
 
@@ -112,21 +112,26 @@ uma solução para esse tipo de equação, precisamos utilizar o método dos coe
 O método dos coeficientes indeterminados diz que a solução geral de uma equação 
 diferencial não homogênea
 da forma $y'' + p(t)'y + q(t)y = g(t)$ pode ser escrita como
-\[ y(x) = Y(t) + c_1.y_1(t) + c_2.y_2(t)\] 
-Para $c_1, c_2 \in R$ e onde ${y_1,y_2}$ formam um conjunto fundamental de soluções
-da EDO homogênea correspondente à equação. Neste caso, temos que a EDO correspondente é uma equação
+\[ y(t) = Y(t) + c_1.y_1(t) + c_2.y_2(t)\] 
+Para $c_1, c_2 \in R$ e onde \{$y_1,y_2$\} formam um conjunto fundamental de soluções
+da EDO homogênea correspondente. Neste caso, temos que a EDO correspondente é uma equação
 linear homogênea e é escrita como: 
-\[y'' + p(t)'y + q(t)y = 0\] 
+\[y'' + p(t)y' + q(t)y = 0\] 
 
 Aplicando esta ideia então à nossa equação linear não homogênea de segunda ordem que descreve o problema 
 de vibração forçada da ponte, temos que:
-A equação original será 
+A equação original será (adicionar label à equação)
 \[  my'' + cy'  + ky = F(t)\] 
 e sua equação correspondente será
 \[ my'' + cy'  + ky = 0\]
-Agora, podemos encontrar uma equação auxiliar 
+
+Como a equação acima é linear e homogênea, iremos trabalhar com soluções exponenciais na forma $y=e^{rt}$, onde r é um parâmetro a ser determinado. (REFERENCIA BOYCE DIPRIMA)
+Assim, temos que $y'=re^{rt}$  e $y''=r^2 e^{rt}$. Substituindo essas novas soluções na equação acima, podemos encontrar a chamada equação auxiliar,
+que por $e^{rt}\neq 0$, poderemos assumir a equação (label) como equação auxiliar, ou característica:
+\[ (mr^2 + cr  + k)e^{rt} = 0\] 
 \[ mr^2 + cr  + k = 0\] 
-e suas raízes:
+
+Como temos uma equação de segundo grau como auxiliar, temos que as suas raízes serão:
 \[ r_1 = \frac{-c + \sqrt{c^2 - 4mk}}{2m}\] \[ r_2 = \frac{-c - \sqrt{c^2 - 4mk}}{2m} \]
 Portanto temos três possíveis cenários para avaliarmos:
 \begin{enumerate}
@@ -134,22 +139,41 @@ Portanto temos três possíveis cenários para avaliarmos:
     \item $c^2 - 4mk < 0$
     \item $c^2 - 4mk = 0$
 \end{enumerate}
-Em cada um desses cenários temos consequências diretas para a vibração de um objeto e
-diferentes resultados matemáticos que descrevem estas consequências. Iremos abordar
-quais são esses resultados e suas implicações a seguir.
+
+Em cada um desses casos temos consequências diretas para a vibração de um objeto e
+diferentes resultados matemáticos como soluções da EDO. Iremos abordar
+quais são esses resultados a seguir e suas implicações serão discutidas na próxima seção.
 \pagebreak
 
-\subsection{Superamortecimento}
+- todos os deltas possíveis o que eles implicam
+
+\subsection{Caso 1: discriminante maior do que zero}
 
 Quando temos valores constantes de c, m e k tal que $c^2 - 4mk > 0$, podemos afirmar que 
-$r_1$ e $r_2$ serão diferentes entre si. 
+$r_1$ e $r_2$ serão diferentes entre si. Sendo assim, a solução será uma combinação linear da forma:
+\[y = c_1.e^{r_1t} + c_2.e^{r_2t}\]
 
-\subsection{Subamortecimento}
+Onde $c_1$ e $c_2$ são constantes que podem ser encontradas quando a EDO faz parte de um problema
+de valor inicial, ou seja, quando temos valores iniciais de $y(0)=y_0$ e de $y'(0)=y_1$, como no 
+exemplo 3 da seção 1 do capítulo 3 do livro Boyce DiPrima. 
+
+É importante destacar que  $y_1 = e^{r_1t}$ e $y_2 = ^{r_2t}$.
+
+\subsection{Caso 2: discriminante menor do que zero}
 
 Quando temos valores constantes de c, m e k tal que $c^2 - 4mk < 0$, podemos afirmar que 
-$r_1$ e $r_2$ serão raízes complexas.
+$r_1$ e $r_2$ serão raízes complexas e distintas entre si. Podemos descrever $r_1$ e $r_2$ como:
+\[ r_1 = \alpha + i\beta\] 
+\[ r_2 = \alpha - i\beta\] 
+e portanto, a solução geral será:
+\[ y(t) = c_1.e^{(\alpha + i\beta)t} + c_2.e^{(\alpha - i\beta)t}\]
 
-\subsection{Amortecimento Crítico ou Escassez de amortecimento}
+Note que neste caso, a solução geral também é uma combinação linear de um conjunto fundamental de soluções,
+onde $y_1 = e^{(\alpha + i\beta)t}$ e $y_2 = e^{(\alpha - i\beta)t}$.
+
+(COMENTAR SOLUÇÕES trigonométricaS)
+
+\subsection{Caso 3: discriminante igual a zero}
 
 Quando temos valores constantes de c, m e k tal que $c^2 - 4mk = 0$, podemos afirmar que 
 $r_1$ e $r_2$ serão correspondentes entre si. Este é o caso que descreve o nosso problema.
@@ -158,14 +182,19 @@ $r_1$ e $r_2$ serão correspondentes entre si. Este é o caso que descreve o nos
 
 \subsection{O lado direito da equação}
 
-\vspace*{0.8cm}
-descrever:
+- resolver a equação não homogênea para algum F(t): lado direito
 
-- todos os deltas possíveis o que eles implicam
+\pagebreak
+
+\section{Discussão dos Resultados}
 
 - quais são as soluções da EDO para cada delta possível
-
 - qual se aplica ao problema
 
-- resolver a equação não homogênea para algum F(t): lado direito
+\subsection{Superamortrcimento}
+
+\subsection{Subamortecimneto}
+
+\subsection{Amortecimento crítico}
+
 \end{document}
