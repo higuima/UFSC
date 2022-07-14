@@ -32,6 +32,12 @@
     Neste trabalho, irei mostrar o problema de vibração forçada aplicado à uma ponte construída em Londres no ano 2000.
 Este problema de vibração forçada pode ser descrito por uma equação diferencial linear não homogênea, que como vimos em aula,
 pode ser resolvida pelo método dos coeficientes indeterminados.
+
+Irei abordar também as implicações das constantes escolhidas para a EDO e como elas
+geram resoluções diferentes para uma mesma equação. Além disso, farei um desenvolvimento 
+focado no lado direito da EDO não homogênea e mostrar possíveis soluções tendo como base
+o artigo (artigo que menciona equação do andar humano), que descreve o movimento oscilatório dos passos 
+de uma multidão em uma equação trigonométrica.
 \end{abstract}
 \pagebreak 
 
@@ -96,14 +102,15 @@ Com essas variáveis teríamos que:
 \[ m.\frac{d^2 y}{d t^2} = -k.y - c\frac{dy}{dt} + F(t)\] 
 \[ m.\frac{d^2 y}{d t^2} + c\frac{dy}{dt}  + k.y = F(t)\] 
 
-Esta equação é a que descreve a vibração forçada e também, quando existe um subamortecimento (ou c=0),
+Esta equação é a que descreve a vibração forçada e também, quando existe uma escassez de amortecimento,
 temos também a descrição do fenômeno da ressonância.
 Pode se perceber que ela é uma equação linear não homogênea de segunda ordem e para encontrarmos 
 uma solução para esse tipo de equação, precisamos utilizar o método dos coeficientes indeterminados.
 
 \pagebreak 
 \section{Resolução da EDO}
-O método dos coeficientes indeterminados diz que a solução geral de uma equação diferencial não homogênea
+O método dos coeficientes indeterminados diz que a solução geral de uma equação 
+diferencial não homogênea
 da forma $y'' + p(t)'y + q(t)y = g(t)$ pode ser escrita como
 \[ y(x) = Y(t) + c_1.y_1(t) + c_2.y_2(t)\] 
 Para $c_1, c_2 \in R$ e onde ${y_1,y_2}$ formam um conjunto fundamental de soluções
@@ -114,12 +121,42 @@ linear homogênea e é escrita como:
 Aplicando esta ideia então à nossa equação linear não homogênea de segunda ordem que descreve o problema 
 de vibração forçada da ponte, temos que:
 A equação original será 
-
 \[  my'' + cy'  + ky = F(t)\] 
 e sua equação correspondente será
 \[ my'' + cy'  + ky = 0\]
-Agora, podemos encontrar uma equação auxiliar e suas raízes:
+Agora, podemos encontrar uma equação auxiliar 
 \[ mr^2 + cr  + k = 0\] 
+e suas raízes:
+\[ r_1 = \frac{-c + \sqrt{c^2 - 4mk}}{2m}\] \[ r_2 = \frac{-c - \sqrt{c^2 - 4mk}}{2m} \]
+Portanto temos três possíveis cenários para avaliarmos:
+\begin{enumerate}
+    \item $c^2 - 4mk > 0$
+    \item $c^2 - 4mk < 0$
+    \item $c^2 - 4mk = 0$
+\end{enumerate}
+Em cada um desses cenários temos consequências diretas para a vibração de um objeto e
+diferentes resultados matemáticos que descrevem estas consequências. Iremos abordar
+quais são esses resultados e suas implicações a seguir.
+\pagebreak
+
+\subsection{Superamortecimento}
+
+Quando temos valores constantes de c, m e k tal que $c^2 - 4mk > 0$, podemos afirmar que 
+$r_1$ e $r_2$ serão diferentes entre si. 
+
+\subsection{Subamortecimento}
+
+Quando temos valores constantes de c, m e k tal que $c^2 - 4mk < 0$, podemos afirmar que 
+$r_1$ e $r_2$ serão raízes complexas.
+
+\subsection{Amortecimento Crítico ou Escassez de amortecimento}
+
+Quando temos valores constantes de c, m e k tal que $c^2 - 4mk = 0$, podemos afirmar que 
+$r_1$ e $r_2$ serão correspondentes entre si. Este é o caso que descreve o nosso problema.
+
+
+
+\subsection{O lado direito da equação}
 
 \vspace*{0.8cm}
 descrever:
@@ -130,5 +167,5 @@ descrever:
 
 - qual se aplica ao problema
 
-- resolver a equação não homogênea para algum F(t)
+- resolver a equação não homogênea para algum F(t): lado direito
 \end{document}
