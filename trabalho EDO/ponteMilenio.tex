@@ -30,42 +30,43 @@
 \end{titlepage}
 
 \begin{abstract}
-    Neste trabalho, irei mostrar o problema de vibração forçada aplicado à uma ponte construída em Londres no ano 2000.
+    Neste trabalho, será mostrado o problema de vibração forçada aplicado à uma ponte construída em Londres no ano 2000.
 Este problema de vibração forçada pode ser descrito por uma equação diferencial linear não homogênea, que como vimos em aula,
 pode ser resolvida pelo método dos coeficientes indeterminados.
 
-Irei abordar também as implicações das constantes escolhidas para a EDO e como elas
-geram resoluções diferentes para uma mesma equação. Além disso, farei um desenvolvimento 
-focado no lado direito da EDO não homogênea e mostrar possíveis soluções tendo como base
-o artigo (artigo que menciona equação do andar humano), que descreve o movimento oscilatório dos passos 
+Será abordado também as implicações das constantes escolhidas para a equação
+diferencial ordinária (EDO) e como elas
+geram resoluções diferentes para uma mesma equação. Além disso, haverá um desenvolvimento 
+focado no lado direito da EDO não homogênea e serão mostradas possíveis soluções tendo como base
+o artigo de Strogatz, Steven H. and Abrams, Daniel M. and McRobie, Allan and Eckhardt, Bruno and Ott, Edward (2005), 
+que descreve o movimento oscilatório dos passos 
 de uma multidão em uma equação trigonométrica.
 \end{abstract}
 \pagebreak 
 
 \section{Introdução}
 
-A ponte do milênio, foi construída em Londres no ano de 2000 para comemorar
-a virada do milênio, com o objetivo de desafiar a engenharia e ter um estilo arquitetônico único, e foi exatamente isso que aconteceu.
-Graças ao design moderno e desafiador da ponte, no dia da sua inauguração a ponte começou a se mostrar um projeto falho.
-Enquanto as pessoas iam subindo na ponte e iam caminhando sobre ela, a ponte começou a balançar. Quanto mais pessoas andavam sobre ela,
-mais ela balançava. Este incidente foi tão grave que tiveram que fechar a ponte até conseguirem consertar o problema.
+A ponte do milênio foi construída em Londres no ano de 2000 para comemorar
+a virada do milênio com o objetivo de desafiar a engenharia e ter um estilo arquitetônico único.
+Graças ao design moderno e desafiador da ponte, no dia da sua inauguração ela começou a se mostrar um projeto falho.
+Na medida em que as pessoas subiam e caminhavam sobre ela, perceberam sua instabilidade.
+Este incidente foi tão grave que tiveram que fechá-la até conseguirem consertar o problema.
 
-A ponte sofria de um fenômeno denominado vibração lateral sincronizada (REFERENCIA AQUI), causado pelo andar das pessoas em cima da mesma.
+A ponte sofria de um fenômeno denominado vibração lateral sincronizada \cite{ponteMilenioPortugues20}, causado pelo andar das pessoas em sua superfície.
 Este imprevisto provocou dois anos de pesquisa sobre o caminhar humano e o impacto dele sobre a estrutura. 
 Depois de uma extensa investigação, percebeu-se que os passos individuais não seriam capazes de gerar tanto impacto, e assim
-o conceito de "efeito de multidão" se tornou foco do estudo também. Concluíram que, graças ao efeito de multidão,
-as pessoas andando sobre a ponte sincronizavam o caminhar, mesmo sem perceber, e que, graças à movimentação horizontal extrema provocada pelos
-passos da multidão, a ponte sofria o fenômeno de excitação lateral sincronizada.
+o conceito de "efeito de multidão" se tornou foco do estudo também. Foi concluído que, graças ao "efeito de multidão",
+as pessoas andando sobre a ponte sincronizavam o caminhar, mesmo sem perceber, e que, graças à movimentação horizontal 
+extrema provocada pelos passos da multidão, ela sofria o fenômeno de 
+Excitação Lateral Sincronizada.
 
 Tendo em vista esse problema aplicado, este trabalho tem como objetivo descerver matemáticamente
 o problema encontrado pelos engenheiros, mostrar que o problema é de fato, uma equação linear não 
-homogênea de segunda ordem, resolver esta EDO e mostrar suas implicações no mundo real.
-Na modelagem, irei discutir quais foram as causas deste problema e com essas variáveis, montar a EDO que
-descreve o fenômeno. Na resolução, como indica o nome, irei utilizar do método dos coeficientes indeterminados
-para resolver a EDO encontrada. Na discussão, irei demonstrar quais as consequências da resolução, suas representações
-gráficas e o que significam.
-Na conclusão irei discutir como esta ponte revolucionou a história da engenharia, da arquitetura, explicar quais foram as soluções 
-aplicadas pelos engenheiros responsáveis e como este problema gerou uma nova maneira de pensar matemáticamente.
+homogênea de segunda ordem, resolver esta equação
+diferencial ordinária (EDO) e mostrar suas implicações no mundo real.
+Na modelagem, serão discutidas quais foram as causas deste problema e com essas variáveis, montar a EDO que
+descreve o fenômeno. Na resolução, será utilizado o método dos coeficientes indeterminados
+para resolver a EDO encontrada. 
 
 \pagebreak 
 \section{Modelagem}
@@ -74,17 +75,17 @@ A vibração forçada que foi provocada pelo movimento horizontal lateral dos pa
 chamado de ressônancia, pois a ressonância  é o resultado de quando a frequência aplicada reforça a frequência natural e nesse caso temos vibrações de grande amplitude.
 
 Ao andar, o centro de gravidade das pessoas se alterna lateralmente. 
-Quando temos apenas uma pessoa caminhando, este esforço lateral pode ser considerado 
+Quando há apenas uma pessoa caminhando, esse esforço lateral pode ser considerado 
 desprezível, porém quando consideramos uma multidão de centenas de pessoas, temos o 
 chamado “efeito de multidão”, em que a sincronia exercida pela caminhada do público é tal 
-que acaba criando uma onda com frequência similar à da própria ponte. Assim, 
-temos que a frequência natural da onda é incrementada e sua amplitude cresce, 
-resultando assim em um fenômeno de ressonância que causou um movimento lateral 
-sincronizado e altamente perceptível à todos em cima e à volta da ponte.
+que cria uma onda com frequência similar à da própria ponte. Assim, 
+term-se que a frequência natural da onda é incrementada e sua amplitude cresce, 
+resultando assim em um fenômeno de ressonância que causa um movimento lateral 
+oscilatório - altamente perceptível à todos em cima e em volta da ponte.
 
 Pensando em vibrações de molas, podemos descrever a força elástica como $F_e = -k.y$, onde k é a
-constante elástica e y é a unidade de distorção da mola. Pela segunda lei de newton, sabemos que a força de um
-objeto é igual à sua massa vezes à sua aceleração de maneira que podemos descrever a aceleração de um objeto como:
+constante elástica e y é a unidade de distorção da mola. Pela segunda Lei de Newton, sabemos que a força de um
+objeto é igual à sua massa vezes a sua aceleração de maneira que podemos descrever a aceleração de um objeto como:
 \[ a = \frac{d^2 y}{d t^2} \]
 
 Assim, temos que a equação de força elástica é:
@@ -93,13 +94,13 @@ Assim, temos que a equação de força elástica é:
 
 Tendo em vista que a força de amortecimento é conhecida como $F_c = -c\frac{dy}{dt}$,
 ao pensar em uma vibração amortecida temos que a força do objeto será a 
-força restauradora + força de amortecimento
-\[ m.\frac{d^2 y}{d t^2} = -k.y - c\frac{dy}{dt}\]
+força restauradora somada à força de amortecimento:
+\[ m.\frac{d^2 y}{d t^2} = -k.y + (- c\frac{dy}{dt})\]
 \[ m.\frac{d^2 y}{d t^2} + c\frac{dy}{dt}  + k.y = 0\]
 
 Agora, supondo que além da força restauradora e da força de amortecimento, existe uma força externa sendo aplicada no
 objeto, por exemplo uma multidão de passos sincronizados que gera uma movimentação lateral.
-Com essas variáveis teríamos que:
+Com essas variáveis teríamos que
 \[ m.\frac{d^2 y}{d t^2} = -k.y - c\frac{dy}{dt} + F(t)\] 
 \begin{equation}
     \label{EDOdydt}
@@ -108,18 +109,20 @@ Com essas variáveis teríamos que:
 
 A equação \ref{EDOdydt} é a que descreve a vibração forçada e quando existe uma escassez de amortecimento,
 descreve também o fenômeno da ressonância.
-Pode se perceber que ela é uma equação linear não homogênea de segunda ordem e para encontrarmos 
+Pode-se perceber que ela é uma equação linear não homogênea de segunda ordem e para encontrarmos 
 uma solução para esse tipo de equação, precisamos utilizar o método dos coeficientes indeterminados.
 
-Agora pensando no lado direito da equação, temos $F(t)$ para representar o movimentação
-oscilatório do caminhar humano. Este movimento oscilatório pode ser descrito como 
+Agora pensando no lado direito da equação, temos $F(t)$ para representar a movimentação
+oscilatória do caminhar humano. Este movimento oscilatório pode ser descrito como 
 \begin{equation}
     \label{Synch}
    F(t) = G\sum_{i = 1}^{N}  \sin \theta_i
 \end{equation}
-Onde o número de pedestres varia de $i$ até $N$ faz uma força 
+Em que o número de pedestres que varia de $i$ até $N$ faz uma força 
 lateral oscilatória $G\sin\theta_i$ na ponte, G é a força máxima e $\theta_i(t)$
-é a fase que aumenta em $2\pi$ durante um ciclo completo de caminhada \cite{crowdSynchrony05}. 
+é a fase que aumenta em $2\pi$ durante um ciclo completo de 
+caminhada \cite{crowdSynchrony05}. 
+
 
 \pagebreak 
 \section{Resolução da EDO}
@@ -132,21 +135,34 @@ da EDO homogênea correspondente. Neste caso, temos que a EDO correspondente é 
 linear homogênea e é escrita como: 
 \[y'' + p(t)y' + q(t)y = 0\] 
 
-Aplicando esta ideia então à nossa equação linear não homogênea de segunda ordem que descreve o problema 
+Aplicando esta ideia então à equação linear não homogênea de segunda ordem que descreve o problema 
 de vibração forçada da ponte, temos que:
-A equação original será (adicionar label à equação)
-\[  my'' + cy'  + ky = F(t)\] 
-e sua equação correspondente será
-\[ my'' + cy'  + ky = 0\]
 
-Como a equação acima é linear e homogênea, iremos trabalhar com soluções exponenciais na forma $y=e^{rt}$, onde r é um parâmetro a ser determinado. (REFERENCIA BOYCE DIPRIMA)
-Assim, temos que $y'=re^{rt}$  e $y''=r^2 e^{rt}$. Substituindo essas novas soluções na equação acima, podemos encontrar a chamada equação auxiliar,
-que por $e^{rt}\neq 0$, poderemos assumir a equação (label) como equação auxiliar, ou característica:
+a equação original será (adicionar label à equação)
+\begin{equation}
+    my'' + cy'  + ky = F(t) 
+    \label{original}
+\end{equation}
+e sua equação correspondente será
+\begin{equation}
+    my'' + cy'  + ky = 0
+    \label{correspondente}
+\end{equation}
+
+Como a equação acima é linear e homogênea, 
+iremos trabalhar com soluções exponenciais na forma $y=e^{rt}$, onde r é um parâmetro a 
+ser determinado \cite{boyce10}. Assim, temos que $y'=re^{rt}$  e $y''=r^2 e^{rt}$. 
+
+Substituindo essas novas soluções na equação \ref{correspondente}, podemos encontrar a chamada equação auxiliar,
+que como $e^{rt}\neq 0$, poderemos assumir que será:
 \[ (mr^2 + cr  + k)e^{rt} = 0\] 
 \[ mr^2 + cr  + k = 0\] 
 
 Como temos uma equação de segundo grau como auxiliar, temos que as suas raízes serão:
 \[ r_1 = \frac{-c + \sqrt{c^2 - 4mk}}{2m}\] \[ r_2 = \frac{-c - \sqrt{c^2 - 4mk}}{2m} \]
+
+\pagebreak
+
 Portanto temos três possíveis cenários para avaliarmos:
 \begin{enumerate}
     \item $c^2 - 4mk > 0$
@@ -155,45 +171,28 @@ Portanto temos três possíveis cenários para avaliarmos:
 \end{enumerate}
 
 Em cada um desses casos temos consequências diretas para a vibração de um objeto e
-diferentes resultados matemáticos como soluções da EDO. Iremos abordar
+diferentes resultados matemáticos como soluções da EDO. Serão abordados
 quais são esses resultados a seguir e suas implicações serão discutidas na próxima seção.
-\pagebreak
-
-- todos os deltas possíveis o que eles implicam
 
 \subsection{Caso 1: discriminante maior do que zero}
 
-Quando temos valores constantes de c, m e k tal que $c^2 - 4mk > 0$, podemos afirmar que 
+Quando se tem valores constantes de c, m e k tal que $c^2 - 4mk > 0$, podemos afirmar que 
 $r_1$ e $r_2$ serão diferentes entre si. Sendo assim, a solução será uma combinação linear da forma:
 \[y = c_1.e^{r_1t} + c_2.e^{r_2t}\]
 
 Onde $c_1$ e $c_2$ são constantes que podem ser encontradas quando a EDO faz parte de um problema
-de valor inicial, ou seja, quando temos valores iniciais de $y(0)=y_0$ e de $y'(0)=y_1$, como no 
+de valor inicial, ou seja, quando se tem valores iniciais de $y(0)=y_0$ e de $y'(0)=y_1$, como no 
 exemplo 3 da seção 1 do capítulo 3 do livro Boyce DiPrima. 
 
-É importante destacar que  $y_1 = e^{r_1t}$ e $y_2 = ^{r_2t}$.
+É importante destacar que  $y_1 = e^{r_1t}$ e $y_2 = e^{r_2t}$.
 
-\subsection{Caso 2: discriminante menor do que zero}
+\subsection{Caso 2: discriminante igual a zero}
 
-Quando temos valores constantes de c, m e k tal que $c^2 - 4mk < 0$, podemos afirmar que 
-$r_1$ e $r_2$ serão raízes complexas e distintas entre si. Podemos descrever $r_1$ e $r_2$ como:
-\[ r_1 = \alpha + i\beta\] 
-\[ r_2 = \alpha - i\beta\] 
-e portanto, a solução geral será:
-\[ y(t) = c_1.e^{(\alpha + i\beta)t} + c_2.e^{(\alpha - i\beta)t}\]
+Quando se tem valores constantes de c, m e k tal que $c^2 - 4mk = 0$, pode-se afirmar que 
+$r_1$ e $r_2$ serão iguais. 
 
-Note que neste caso, a solução geral também é uma combinação linear de um conjunto fundamental de soluções,
-onde $y_1 = e^{(\alpha + i\beta)t}$ e $y_2 = e^{(\alpha - i\beta)t}$.
-
-(COMENTAR SOLUÇÕES trigonométricaS)
-
-\subsection{Caso 3: discriminante igual a zero}
-
-Quando temos valores constantes de c, m e k tal que $c^2 - 4mk = 0$, podemos afirmar que 
-$r_1$ e $r_2$ serão correspondentes entre si. 
-
-Assim, temos que $r_1$ = $r_2$ = $\frac{-c}{2m}$ e 
-então $y1=e^{\frac{-ct}{2m}}$. Precisamos agora encontrar $y_2$ e para isto iremos supor que 
+Assim, tem-se que $r_1$ = $r_2$ = $\frac{-c}{2m}$ e 
+então $y1=e^{\frac{-ct}{2m}}$. É necessário encontrar $y_2$ e para isto supõe-se que 
 \[ y_2= \mu (t)e^{\frac{-ct}{2m}}\]
 
 De maneira que
@@ -201,32 +200,30 @@ De maneira que
 e 
 \[y_2''(t) = \mu ''(t)e^{\frac{-ct}{2m}} -\frac{-c}{2m}\mu '(t)e^{\frac{-ct}{2m}} + \frac{c^2}{4m^2}\mu (t)e^{\frac{-ct}{2m}}\]
 
-Substituindo na EDO original, temos que:
+Substituindo na equação correspondente \ref{correspondente}, tem-se que:
 \[ my'' + cy'  + ky = 0\]
 será
 \[ m[\mu ''(t)e^{\frac{-ct}{2m}} -\frac{c}{2m}\mu '(t)e^{\frac{-ct}{2m}} + \frac{c^2}{4m^2}\mu (t)e^{\frac{-ct}{2m}}] + c[\mu '(t)e^{\frac{-ct}{2m}} -\frac{c}{2m}\mu (t)e^{\frac{-ct}{2m}}] + k[\mu (t)e^{\frac{-ct}{2m}}] = 0\]
 \[ e^{\frac{-ct}{2m}} \{m[\mu ''(t) - \frac{c}{2m}\mu '(t) + \frac{c^2}{4m^2}\mu (t)] + c[\mu '(t) -\frac{c}{2m}\mu (t)] + k[\mu (t)]\} = 0 \]
-Sabemos que $e^{\frac{-ct}{2m}}$ não se anula, ou seja: 
+Sabe-se que $e^{\frac{-ct}{2m}}$ não se anula, ou seja: 
 \[m[\mu ''(t) - \frac{c}{2m}\mu '(t) + \frac{c^2}{4m^2}\mu (t)] + c[\mu '(t) -\frac{c}{2m}\mu (t)] + k[\mu (t)] = 0\]
 \[ m\mu ''(t)  + \mu '(t)[\frac{-mc}{m} + c] + \mu (t) [\frac{c^2}{4m} - \frac{c^2}{2m} + k] = 0\]
 
-Nesta equação temos que o termo que multiplica $\mu '(t)$ é zero e, comparando com nossa EDO, podemos claramente 
+Nesta equação tem-se que o termo que multiplica $\mu '(t)$ é zero e, comparando com a equação \ref{correspondente}, pode-se
 notar que isso implica que o termo $c.y'$ é  nulo, ou, mais especificamente, $c=0$. 
-Assim, temos que este é o caso que descreve o nosso problema de vibrações 
-forçadas, pois a constante c, responsável pelo amortecimento, é nula.
 
-Retomando, temos
+Retomando,
 \[m\mu ''(t) + \mu (t) [ - \frac{c^2}{4m} + k] = 0\]
 \[m\mu ''(t) + \mu (t) [k - \frac{c^2}{4m}] = 0\]
 
 Observando o termo que multiplica $\mu(t)$
 \[ k - \frac{c^2}{4m} \Leftrightarrow c^2 - 4mk\]
-temos que ele é o prórpio discriminante que estamos estudando, ou seja, também é nulo.
+tem-se que ele é o prórpio discriminante que está sendo estudado, ou seja, também é nulo.
 
 Sendo assim, 
 \[m\mu ''(t) = 0\]
 
-Como a massa do objeto que estamos estudando não pode ser nula, nos resta que
+Como a massa do objeto não pode ser nula,
 \[\mu ''(t) = 0\]
 
 E agora, integrando para encontrar $\mu(t)$
@@ -235,22 +232,92 @@ E agora, integrando para encontrar $\mu(t)$
 
 Substituindo em y
 \[ y= c_1e^{\frac{-ct}{2m}} + c_2te^{\frac{-ct}{2m}}\]
+
+\subsection{Caso 3: discriminante menor do que zero}
+
+Quando se tem valores constantes de c, m e k tal que $c^2 - 4mk < 0$, é possível afirmar que 
+$r_1$ e $r_2$ serão raízes complexas e distintas entre si. Assim descreve-se $r_1$ e $r_2$ como:
+\[ r_1 = \alpha + i\beta\] 
+\[ r_2 = \alpha - i\beta\] 
+e portanto, a solução geral será:
+\begin{equation}
+    \label{complexY}
+    y(t) = c_1.e^{(\alpha + i\beta)t} + c_2.e^{(\alpha - i\beta)t}
+\end{equation}
+
+Note que neste caso, a solução geral também é uma combinação linear de um conjunto fundamental de soluções,
+onde $y_1 = e^{(\alpha + i\beta)t}$ e $y_2 = e^{(\alpha - i\beta)t}$.
+Pela fórmula de Euler \cite{boyce10}, tem-se que 
+\[ e^{it}= \cos(t) + i \sin(t)\] 
+Substituindo em $e^{(\alpha + i\beta)t}$:
+\[e^{i\beta t} = \cos(\beta t) + i \sin(\beta t)\] 
+\[e^{(\alpha + i\beta)t} = e^{\alpha t}(\cos(\beta t) + i \sin(\beta t))\] 
+e portanto, ao substituir $t$ por $\beta t$, tem-se que \ref{complexY} pode ser reescrita como
+\begin{equation}
+    y(t) = c_1.e^{\alpha t}(\cos(\beta t) + i \sin(\beta t)) + c_2.e^{\alpha t}(\cos(\beta t) - i \sin(\beta t))
+    \label{solucao}
+\end{equation}
+
+
+Como o amortecimento da ponte é nulo $c=0$. Assim pode se declarar que este 
+é o caso que descreve o problema desse trabalho pois, como m e k serão sempre constantes positivas, 
+$c^2 -4mk$ sempre será menor do que zero.
+
+Assim, para reescrever \ref{solucao} em função de m e k, utiliza-se 
+\[ \beta = \frac{\sqrt{-4mk}}{2m}\] 
+e \[ \alpha = \frac{-c}{2m}\] 
+portanto
+\begin{equation}
+    y(t) = c_1\cos(\beta t) + c_2 \sin(\beta t)
+    \label{fundamental}
+\end{equation}
+
 \subsection{O lado direito da equação}
 
-- resolver a equação não homogênea para algum F(t): lado direito
+Como o lado direito da equação \ref{EDOdydt} é dado por $F(t)$ é preciso utilizar o 
+métodos dos coeficientes a determinar para encontrar um $Y(t)$ que seja solução da EDO.,
 
-\pagebreak
+Sendo $F(t) = G\sum_{i = 1}^{N}  \sin \theta_i$, $Y(t)$ será da forma
+\[Y(t) = G(A\sum_{i = 1}^{N}  \sin \theta_i + B\sum_{i = 1}^{N}  \cos \theta_i )\] 
+e assim
+\[Y'(t) = G(A\sum_{i = 1}^{N}  \cos \theta_i - B\sum_{i = 1}^{N}  \sin \theta_i )\] 
+\[Y''(t) = G(-A\sum_{i = 1}^{N}  \sin \theta_i - B\sum_{i = 1}^{N}  \cos \theta_i )\] 
 
-\section{Discussão dos Resultados}
+Substituindo em \ref{original} tem-se que
+    $$m.[G(-A\sum_{i = 1}^{N}  \sin \theta_i - B\sum_{i = 1}^{N}  \cos \theta_i )] + c[G(A\sum_{i = 1}^{N}  \cos \theta_i - B\sum_{i = 1}^{N}  \sin \theta_i )] $$
+    $$+ k[G(A\sum_{i = 1}^{N}  \sin \theta_i + B\sum_{i = 1}^{N}  \cos \theta_i )] = G\sum_{i = 1}^{N}  \sin \theta_i $$
 
-- quais são as soluções da EDO para cada delta possível
-- qual se aplica ao problema
+\[G[\sum_{i = 1}^{N}  \sin \theta_i(-Am - Bc + Ak) + \sum_{i = 1}^{N}  \cos \theta_i(-Bm +Ac + Bk)] = G\sum_{i = 1}^{N}  \sin \theta_i\]
+Como $Y(t)$ deve ser válida para todo t, iremos utilizar dois pontos específicos $t=0$ e $t= \frac{pi}{2}$
+para criar um sistema linear tal que:
+\[ -Am - Bc + Ak = 1 \] 
+e 
+\[ -Bm + Ac + Bk = 0 \] 
 
-\subsection{Superamortrcimento}
+\[ A(k - m) - B(c) = 1\] 
+\[ B(k - m) + A(c) = 0\]
+Como c representa o amortecimento, que neste caso é nulo, então
+\[ A(k - m) = 1  \Leftrightarrow A = \frac{1}{k -m}\] 
+\[ B(k - m) = 0 \Leftrightarrow B = 0\]
 
-\subsection{Subamortecimneto}
+Retornando em $Y(t)$
+\[Y(t) = G(A\sum_{i = 1}^{N}  \sin \theta_i + B\sum_{i = 1}^{N}  \cos \theta_i )\] 
+\[Y(t) = \frac{G}{k -m}\sum_{i = 1}^{N}  \sin \theta_i\] 
 
-\subsection{Amortecimento crítico}
+\subsection{Resolvendo a EDO}
+
+A equação \ref{original} terá como solução a união das soluções da equação correspondente com 
+a solução do lado direito:
+
+\[ y = Y(t) + c_1y_1 + c_2y_2\] 
+\[ y = \frac{G}{k -m}\sum_{i = 1}^{N}  \sin \theta_i + c_1\cos(\beta t) + c_2 \sin(\beta t)\] 
+
+\section{Conclusão}
+
+É possível perceber que a EDO linear não homogênea de segundo grau que tinhamos no começo descreve
+um problema aplicado e que, ao resolver esta EDO, obtem-se uma equação que representa uma equação de onda.
+A onda descrita por esta equação é uma onda de ressonância pois as amplitudes se somam e geram resultados catastróficos.
+
 
 \bibliography{referencias}
 \end{document}
