@@ -1,0 +1,54 @@
+\documentclass[12pt]{article}
+\usepackage[alf]{abntex2cite}
+\usepackage[utf8]{inputenc}
+\usepackage[portuguese]{babel}
+\usepackage{caption}
+\usepackage{graphicx}
+\usepackage{ragged2e}
+\usepackage{indentfirst}
+\usepackage{float}
+\begin{document}
+    \section{Séries Infinitas}
+    Dada uma série infinita $a_n$ , a soma parcial ddessa série é
+    \[S_1 = a_1,  S_2 = a_1 + a_2 ...\]
+    e com isso, sua soma parcial de ordem n é
+    \[S_n = a_1 + a_2 + a_3 + ... + a_n = \sum_{j = 1}^{n} a_j \]
+
+    Assim, formamos uma nova sequência infinita $S_n$, que é a série de termos de $a_n$.
+    A convergêcia de $S_n$ é também o resultado desta soma. Supondo então que essa sequência converge para S:
+    \[ \sum_{n = 1}^{\infty} a_n  = lim \sum_{j = 1}^{n} a_j  = lim S_n = S\]
+
+    O resto de ordem n é dado por $S - S_n = R_n$.
+
+   \emph{Se uma série converge, seu termo geral tende à zero.}
+
+    Em outras palavras, se $S_n$ é  convergente, então $a_n$ tende à zero. Deste teorema,
+    conseguimos uma condição necessária para a convergêcia de uma série, mas apenas esta 
+    condição não é suficiente para declarar uma séria como convergente. Ou seja, em toda série
+    convergente, o termo geral tende a zero. Porém, nem toda série cujo o termo tende à zero é convergente.
+
+    \emph{Série geométrica: um exemplo do teorema}
+    A série geométrica possui razão $q$:
+    \[ 1 + q + q^2 + ... = \sum_{n=0}^{\infty} q^1\] 
+    A soma reduzida, ou soma parcial, é representada por:
+    \[ S_n = 1 +  q + q^2 + ... + q^n = \frac{1}{1-q} - \frac{q^{n+1}}{1-q}\] 
+    Quando temos $|q| < 1$, $q^n$ tende à zero e a expressão converge para 
+    \[ 1 +  q + q^2 + ... + q^n = \sum_{n=0}^{\infty} q^1 = \frac{1}{1-q}\] 
+
+    Note que se $|q| >= 1$, a série diverge pois seu termo geral não tende à zero.
+
+    \emph{Série harmônica: um contra exemplo do teorema}
+    A série harmônica é dada por:
+    \[\sum_{n=1}^{\infty} \frac{1}{n}\] 
+    Seu termo geral $\frac{1}{n}$ tende à zero quando o valor de n tende a infinito. 
+    Porém, a série que representa a soma do seus termos tende ao infinito, pois cada soma parcial
+    é maior do que $\frac{1}{2}$. Assim, o limite S da série é dado por:
+    \[ S > 1 + \frac{1}{2} + \frac{1}{2} + \frac{1}{2} ..\] 
+    Tornando a série infinita.
+    Formalizando, a série tende ao infinito pois cada soma parcial gera uma subsequência crescente. Por exemplo
+    a subsequência $S_2^n$
+    \[ S_2^n = 1 + \frac{1}{2} + (\frac{1}{3} + \frac{1}{4}) + (\frac{1}{5} + \frac{1}{6} +\frac{1}{7} + \frac{1}{8}) + ... \] 
+    \[ ... + (\frac{1}{2^{n-1} + 1} + \frac{1}{2^{n-1} + 2} + .. + \frac{1}{2^n})\] 
+    \[ =  1 + \frac{1}{2} + \sum_{j = 2}^{n} \frac{1}{2^{j-1} + 1} + \frac{1}{2^{j-1} + 2} + .. + \frac{1}{2^j}\] 
+    
+\end{document}
