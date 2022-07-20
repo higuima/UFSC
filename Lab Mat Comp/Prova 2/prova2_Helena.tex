@@ -109,14 +109,11 @@ O código para definir um intervalo de x, juntamente com o espaçamento de cada 
     \end{center}
 \end{figure}
 
-Agora, desenvolvendo a equação \ref{eq} com o intuito de encontrar uma equação de segundo grau mais explícita
-\[ y = \frac{1}{(x-0.03)^2 + 0.01} + \frac{1}{(x-0.09)^2 + 0.04} - 6\] 
-\[ y = \frac{1}{x^2 - 0,06x + 0,0009 + 0,01} + \frac{1}{x^2 - 0,18x + 0,0081 + 0.04} - 6\] 
-\[ y = \frac{1}{x^2 - 0,06x + 0,0109} + \frac{1}{x^2 - 0,18x + 0,0481} - 6\]
-
-
+Na conclusão, será utilizado o comando \emph{fzero()} para encontrar as raízes da equação.
 
 \subsection{Exercício 3}
+
+
 
 \subsection{Exercício 4}
 
@@ -169,6 +166,19 @@ Iremos verificar três equações quadráticas diferentes que trazem diferentes 
 \end{itemize}
 
 \subsection{Exercício 2}
+
+Abaixo, o resultado do código no qual é possível ver que as raízes da equação \ref{eq} 
+estão entre $[-0.5, 0]$ e $[1, 1.5]$. 
+\begin{figure}[H]
+    \begin{center}
+        \includegraphics[width=0.8\textwidth]{g2.jpeg}
+    \end{center}
+\end{figure}
+
+Com esses valores de intervalo, utilizando o comando \emph{fzero()} do matlab que obtem as raízes de uma função
+em um determinado intervalo, então conclui-se que as raízes da equação \ref{eq} serão:
+\[r_1 =  -0.1316\] 
+\[ r_2 =  1.2995\]
 
 \subsection{Exercício 3}
 
